@@ -6,10 +6,10 @@ This checklist will guide you through removing all default, placeholder, and tem
 - [x] Search for and replace all instances of "Create Next App" with the correct app name (Yika or 忆卡) in code, metadata, and UI.
 - [x] Update the `<title>` tag and any SEO/meta tags in `app/layout.tsx` or other relevant files to reflect the app's branding.
 - [x] Remove or update any placeholder text, images, or links in `app/page.tsx` and other visible pages/components.
-- [ ] Check for and remove any default Next.js, Vercel, or template-related comments, links, or assets in the codebase (including `public/`).
-- [ ] Update the favicon and app icon in `public/` to match the Yika branding.
-- [ ] Review and update README.md and documentation to remove any references to the Next.js template or boilerplate instructions.
-- [ ] Test the app in the browser to ensure all placeholder/template content is gone and the app is fully branded as Yika (忆卡).
+- [x] Check for and remove any default Next.js, Vercel, or template-related comments, links, or assets in the codebase (including `public/`).
+- [x] Update the favicon and app icon in `public/` to match the Yika branding.
+- [x] Review and update README.md and documentation to remove any references to the Next.js template or boilerplate instructions.
+- [x] Test the app in the browser to ensure all placeholder/template content is gone and the app is fully branded as Yika (忆卡).
 ```
 
 ---

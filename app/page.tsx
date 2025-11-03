@@ -1,10 +1,12 @@
 
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-black font-sans">
       <main className="flex-1 flex flex-col items-center justify-center px-4">
         <section className="flex flex-col items-center justify-center w-full min-h-[60vh]">
-          <span className="text-8xl">🀄️</span>
+          <Image src="/images/logo.png" alt="Yika logo" width={96} height={96} className="h-24 w-24 object-contain" priority />
         </section>
         <section className="w-full max-w-md mx-auto py-8">
           <div className="mb-6 border-b pb-4">
@@ -12,7 +14,7 @@ export default function Home() {
             <p className="text-gray-600">A modern, minimal flash card app for Chinese learners.</p>
           </div>
           <div className="mb-6 border-b pb-4">
-            <h3 className="text-lg font-medium mb-1">🀄️ Minimal. Mobile-first.</h3>
+            <h3 className="text-lg font-medium mb-1">Minimal. Mobile-first.</h3>
             <p className="text-gray-600">Login or Signup to get started.</p>
           </div>
         </section>

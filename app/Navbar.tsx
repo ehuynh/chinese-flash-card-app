@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import { createClient } from "@/utils/supabase/server";
 import LogoutButton from "./LogoutButton";
 
@@ -12,7 +13,7 @@ export default async function Navbar() {
   return (
     <nav className="w-full flex items-center justify-between px-4 py-3 bg-white border-b shadow-sm">
       <Link href="/" className="text-lg font-bold tracking-tight text-gray-900">
-        Yika <span className="text-base text-gray-400">(忆卡)</span>
+        Yika <Image src="/images/logo.png" alt="Yika logo" height={48} width={48} className="inline align-middle ml-1" priority />
       </Link>
       <div className="flex gap-2 items-center">
         {!user ? (
