@@ -6,7 +6,6 @@ export default function Home() {
         <section className="flex flex-col items-center justify-center w-full min-h-[60vh]">
           <span className="text-8xl">🀄️</span>
         </section>
-        {/* Example of scrollable paged content */}
         <section className="w-full max-w-md mx-auto py-8">
           <div className="mb-6 border-b pb-4">
             <h2 className="text-xl font-semibold mb-2">Welcome to Yika</h2>
