@@ -26,6 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Yika (忆卡)</title>
+        <meta name="description" content="Yika (忆卡) – Minimal Chinese Flash Card App" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
         <main>{children}</main>
