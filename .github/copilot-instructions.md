@@ -11,6 +11,11 @@
 - **Font**: Uses `next/font` to load the Geist font.
 - **No backend**: The current codebase is frontend-only. All data is managed client-side.
 
+## Interface Guidelines
+- **Responsive Design**: Use Tailwind's responsive utilities to ensure mobile-first design.
+- **Minimal UI**: Keep interfaces clean and simple, focusing on usability and speed.
+- **Monochrome Palette**: Stick to a neutral color scheme with occasional accent colors for buttons/links.
+
 ## Developer Workflows
 - **Start dev server**: `npm run dev` (or `yarn dev`, `pnpm dev`, `bun dev`)
 - **Edit main page**: Modify `app/page.tsx` for the landing/flash card UI.

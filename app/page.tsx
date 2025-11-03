@@ -2,13 +2,6 @@
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-black font-sans">
-      <header className="flex justify-between items-center p-4 border-b sticky top-0 bg-white z-10">
-        <div className="font-bold text-lg">Yika <span className="text-base text-gray-400">(忆卡)</span></div>
-        <div className="space-x-2">
-          <button className="border rounded px-4 py-1">Login</button>
-          <button className="border rounded px-4 py-1">Signup</button>
-        </div>
-      </header>
       <main className="flex-1 flex flex-col items-center justify-center px-4">
         <section className="flex flex-col items-center justify-center w-full min-h-[60vh]">
           <span className="text-8xl">🀄️</span>
