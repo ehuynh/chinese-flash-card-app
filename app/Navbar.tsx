@@ -1,25 +1,13 @@
-"use client";
+
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { createClientComponentClient, User } from '@supabase/auth-helpers-nextjs';
+import { createClient } from "@/utils/supabase/server";
+import LogoutButton from "./LogoutButton";
 
-export default function Navbar() {
-  const supabase = createClientComponentClient();
-  const [user, setUser] = useState<User | null>(null);
 
-  useEffect(() => {
-    let ignore = false;
-    supabase.auth.getUser().then(({ data }) => {
-      if (!ignore) setUser(data.user);
-    });
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-    });
-    return () => {
-      ignore = true;
-      listener?.subscription.unsubscribe();
-    };
-  }, [supabase]);
+export default async function Navbar() {
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getUser();
+  const user = data.user;
 
   return (
     <nav className="w-full flex items-center justify-between px-4 py-3 bg-white border-b shadow-sm">
@@ -35,15 +23,7 @@ export default function Navbar() {
         ) : (
           <>
             <span className="text-gray-700 font-medium mr-2">HI {user.email}</span>
-            <button
-              onClick={async () => {
-                await supabase.auth.signOut();
-                window.location.reload();
-              }}
-              className="px-4 py-2 rounded text-gray-700 font-medium hover:bg-gray-100 transition border border-gray-300"
-            >
-              Logout
-            </button>
+            <LogoutButton />
           </>
         )}
       </div>
