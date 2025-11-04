@@ -43,6 +43,11 @@
 - `docs/` – Project documentation
 - `docs/tasks/` – Task checklists
 
+## Planning & Task Management
+- Use markdown files in `docs/tasks/` to outline feature plans and checklists.
+- Refer to these files when implementing new features.
+- Use checkboxes to track progress.
+
 ## Impelmentation Guidance
 - Follow tasks in `docs/tasks/` for specific features (e.g., login/signup with Supabase).
 - Perform one task at a time.
