@@ -21,16 +21,16 @@ This document outlines the step-by-step plan for implementing the basic flashcar
          - [x] `translation` (string): English translation
       - [x] `id`, `created_at`, `user_id` (optional, for Supabase)
 
-- [ ] **Design the Supabase Table Schema**
-   - [ ] Create a `flashcards` table with columns:
-      - [ ] `id`: uuid (primary key)
-      - [ ] `user_id`: uuid (for multi-user support)
-      - [ ] `characters`: text
-      - [ ] `pinyin`: text
-      - [ ] `meaning`: text
-      - [ ] `tags`: text[] (array of strings)
-      - [ ] `examples`: jsonb (array of objects)
-      - [ ] `created_at`: timestamp with time zone
+ [x] **Design the Supabase Table Schema**
+    - [x] Create a `flashcards` table with columns:
+         - [x] `id`: uuid (primary key)
+         - [x] `user_id`: uuid (for multi-user support)
+         - [x] `characters`: text
+         - [x] `pinyin`: text
+         - [x] `meaning`: text
+         - [x] `tags`: text[] (array of strings)
+         - [x] `examples`: jsonb (array of objects)
+         - [x] `created_at`: timestamp with time zone
 
 - [ ] **Implement Supabase Client Logic**
    - [ ] Add functions to create and fetch flashcards from Supabase.
