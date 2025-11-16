@@ -1,8 +1,8 @@
 import { createClient as createServerClient } from '../../utils/supabase/server';
 import type { Flashcard } from '../../models/flashcard';
 import React from 'react';
-import FlashcardCarousel from './FlashcardCarousel';
-import CollectionCarousel from './CollectionCarousel';
+import FlashcardCarousel from '../components/FlashcardCarousel';
+import CollectionCarousel from '../components/CollectionCarousel';
 
 export default async function DashboardPage() {
   const supabase = await createServerClient();

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import type { Collection } from '../../models/collection';
 
 interface CollectionCarouselProps {
@@ -16,15 +17,16 @@ export default function CollectionCarousel({ collections }: CollectionCarouselPr
         style={{ scrollSnapType: 'x mandatory' }}
       >
         {collections.map((col: Collection) => (
-          <div
+          <Link
             key={col.id}
-            className="min-w-[200px] max-w-xs border rounded-lg p-4 bg-neutral-50 dark:bg-neutral-900 shadow flex flex-col gap-2"
+            href={`/collection/${col.id}`}
+            className="min-w-[200px] max-w-xs border rounded-lg p-4 bg-neutral-50 dark:bg-neutral-900 shadow flex flex-col gap-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors cursor-pointer"
             style={{ scrollSnapAlign: 'start' }}
           >
             <span className="text-lg font-semibold">{col.name}</span>
             <span className="text-neutral-500 text-sm">{col.description}</span>
             <span className="text-neutral-400 text-xs">Created: {col.created_at ? new Date(col.created_at).toLocaleDateString() : ''}</span>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
