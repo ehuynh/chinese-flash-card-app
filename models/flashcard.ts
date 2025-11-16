@@ -9,6 +9,7 @@ export interface ExampleUsage {
 export interface Flashcard {
   id?: string; // Supabase-generated UUID
   user_id?: string; // For multi-user support
+  collection_id?: string; // UUID, foreign key to Collection.id
   characters: string; // The Chinese characters or word
   pinyin: string; // The pronunciation
   meaning: string; // The English meaning
