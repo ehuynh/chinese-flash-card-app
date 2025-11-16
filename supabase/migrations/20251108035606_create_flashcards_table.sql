@@ -6,5 +6,6 @@ CREATE TABLE IF NOT EXISTS flashcards (
 	meaning text NOT NULL,
 	tags text[] NOT NULL DEFAULT '{}',
 	examples jsonb NOT NULL DEFAULT '[]',
-	created_at timestamptz NOT NULL DEFAULT now()
+	created_at timestamptz NOT NULL DEFAULT now(),
+	updated_at timestamptz NOT NULL DEFAULT now()
 );

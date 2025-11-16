@@ -16,4 +16,5 @@ export interface Flashcard {
   tags: string[]; // Array of tags (e.g., ["HSK1", "food"])
   examples: ExampleUsage[]; // Array of example usages
   created_at?: string; // Supabase timestamp
+  updated_at?: string; // Supabase timestamp
 }

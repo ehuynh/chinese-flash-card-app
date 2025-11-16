@@ -5,21 +5,21 @@ User's active file:
 
 ## 1. Data Model Design
 
-- [ ] Create a new `Collection` model with fields:
-	- [ ] `id` (UUID, primary key)
-	- [ ] `name` (string, required)
-	- [ ] `description` (string, optional)
-	- [ ] `created_at` (timestamp)
-	- [ ] `updated_at` (timestamp)
-- [ ] Update the `Flashcard` model to include:
-	- [ ] `collection_id` (UUID, foreign key to `Collection.id`)
+- [x] Create a new `Collection` model with fields:
+	- [x] `id` (UUID, primary key)
+	- [x] `name` (string, required)
+	- [x] `description` (string, optional)
+	- [x] `created_at` (timestamp)
+	- [x] `updated_at` (timestamp)
+- [x] Update the `Flashcard` model to include:
+	- [x] `collection_id` (UUID, foreign key to `Collection.id`)
 
 
 ## 2. Database Schema Migration
 
-- [ ] Create a new table `collections` with the above fields.
-- [ ] Alter the `flashcards` table to add a `collection_id` column (nullable for backward compatibility).
-- [ ] Add a foreign key constraint from `flashcards.collection_id` to `collections.id`.
+- [x] Create a new table `collections` with the above fields.
+- [x] Alter the `flashcards` table to add a `collection_id` column (nullable for backward compatibility).
+- [x] Add a foreign key constraint from `flashcards.collection_id` to `collections.id`.
 
 
 ## 3. Test SQL Insertion Query
